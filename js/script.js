@@ -90,5 +90,5 @@ window.addEventListener('scroll', () => {
 }, false);
 
 console.log('%c Welcome to Atomic\'s Terminal ', 'background: #000; color: #0f0; font-size: 20px; padding: 10px;');
-console.log('%c I am Atomic... Developer in the Shadows 💻', 'color: #0a0; font-size: 14px;');
+console.log('%c Web dev in learn... Developer in the Shadows 💻', 'color: #0a0; font-size: 14px;');
 console.log('%c "I do not seek fame, I seek mastery."', 'color: #070; font-style: italic;');
