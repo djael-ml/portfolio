@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Djaël Mola - Développeur Fullstack spécialisé en solutions web performantes et scalables. Paris, France.">
+    <title>Djaël Mola | Portfolio Développeur Fullstack</title>
+
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    </noscript>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Optimized Background -->
+    <div class="bg-blur blur-1"></div>
+    <div class="bg-blur blur-2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand glass navbar-glass">
+        <div class="container-fluid">
+            <a class="navbar-brand text-gradient" href="#" aria-label="Accueil">DM.</a>
+
+            <div class="ms-auto d-flex gap-3 align-items-center">
+                <a href="#projets"
+                    class="text-decoration-none d-none d-sm-block text-reset small fw-bold text-uppercase opacity-75">Projets</a>
+                <a href="#github"
+                    class="text-decoration-none d-none d-sm-block text-reset small fw-bold text-uppercase opacity-75">Lab</a>
+                <a href="#contact" class="btn-apple text-decoration-none shadow-sm small">Contact</a>
+                <button id="themeToggle" class="btn-theme" aria-label="Basculer le thème">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container hero-section">
+
+        <!-- Hero Profile -->
+        <div class="row align-items-center mb-5" data-aos="fade-up" data-aos-duration="600">
+            <div class="col-lg-3 text-center text-lg-start mb-4 mb-lg-0">
+                <img src="https://ui-avatars.com/api/?name=D+M&size=200&background=0070f3&color=fff&font-size=0.4"
+                    alt="Djaël Mola Avatar" class="hero-avatar" width="140" height="140" loading="eager">
+            </div>
+            <div class="col-lg-9 text-center text-lg-start">
+                <div class="status-badge mb-3">
+                    <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"
+                        style="--bs-spinner-width: 0.6rem; --bs-spinner-height: 0.6rem;"></span>
+                    Disponible pour opportunités
+                </div>
+                <h1 class="display-4 fw-bold mb-3 lh-1">
+                    Djaël Mola. <br>
+                    <span class="text-gradient">Développeur Fullstack.</span>
+                </h1>
+                <p class="lead" style="color: var(--text-muted); max-width: 600px;">
+                    Passionné par la conception d'architectures web robustes et scalables. Expert en écosystèmes PHP et
+                    JavaScript, je transforme des besoins complexes en solutions numériques performantes.
+                </p>
+
+                <div class="d-flex flex-wrap gap-4 justify-content-center justify-content-lg-start mt-4 small text-uppercase fw-bold opacity-75"
+                    style="color: var(--text-muted)">
+                    <span><i class="bi bi-geo-alt-fill text-primary"></i> Paris, France</span>
+                    <span><i class="bi bi-code-slash text-primary"></i> 6+ Années d'Expérience</span>
+                    <span><i class="bi bi-layers-fill text-primary"></i> Fullstack</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Grid (Hardcoded for LCP) -->
+        <div class="row mb-5 justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-12 glass p-5">
+                <div class="row g-4">
+                    <div class="col-md-4 text-center text-md-start">
+                        <h6 class="text-uppercase fw-bold text-gradient mb-3 small">Backend Engineering</h6>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+                            <span class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">PHP
+                                8</span>
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">Symfony</span>
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">MySQL</span>
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">API</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center text-md-start">
+                        <h6 class="text-uppercase fw-bold text-gradient mb-3 small">Frontend Architecture</h6>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">Vue.js</span>
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">React</span>
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">Tailwind
+                                CSS</span>
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center text-md-start">
+                        <h6 class="text-uppercase fw-bold text-gradient mb-3 small">DevOps & Outils</h6>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">Docker</span>
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">Git/GitHub</span>
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">Linux</span>
+                            <span
+                                class="badge bg-body text-body border rounded-pill px-3 py-2 fw-normal shadow-sm">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="d-flex justify-content-between align-items-end mb-4 mt-5" id="projets" data-aos="fade-up">
+            <h3 class="section-title mb-0">Sélection de Projets</h3>
+            <span class="text-muted small">Missions & Réalisations</span>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <!-- Project 1 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+                <div class="card project-card glass border-0">
+                    <img src="https://ui-avatars.com/api/?name=Capoeira&background=f0f0f0&color=333&size=400&font-size=0.3"
+                        data-src="images/capoeira-muzenza.png" class="card-img-top lazy-img" alt="Capoeira Muzenza"
+                        width="600" height="200">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="mb-2">
+                            <span class="badge bg-primary bg-opacity-10 text-primary me-1 rounded-1">HTML, CSS</span>
+                            <span class="badge bg-primary bg-opacity-10 text-primary me-1 rounded-1">JavaScript</span>
+                        </div>
+                        <h4 class="card-title fw-bold my-2">Muzenza Digital Platform</h4>
+                        <p class="card-text text-muted small flex-grow-1">
+                            Refonte complète de l'identité numérique du groupe Capoeira Muzenza Paris. Développement
+                            d'une
+                            plateforme interactive intégrant planning dynamique.
+                        </p>
+                        <div class="mt-4">
+                            <a href="https://muzenza-saintouen.vercel.app/" target="_blank"
+                                class="btn btn-light border rounded-pill fw-bold w-100 btn-sm py-2">
+                                Explorer <i class="bi bi-arrow-up-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Placeholder Project 2 for Balance -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card project-card glass border-0">
+                    <div
+                        class="card-img-top d-flex align-items-center justify-content-center bg-secondary bg-opacity-10 text-muted">
+                        <i class="bi bi-code-square fs-1"></i>
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="mb-2">
+                            <span class="badge bg-primary bg-opacity-10 text-primary me-1 rounded-1">Symfony</span>
+                            <span class="badge bg-primary bg-opacity-10 text-primary me-1 rounded-1">Docker</span>
+                        </div>
+                        <h4 class="card-title fw-bold my-2">GameLys</h4>
+                        <p class="card-text text-muted small flex-grow-1">
+                            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        </p>
+                        <div class="mt-4">
+                            <button class="btn btn-light border rounded-pill fw-bold w-100 btn-sm py-2" disabled>
+                                En Développement <i class="bi bi-lock-fill ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GitHub Section -->
+        <div class="d-flex align-items-center justify-content-between mb-4 mt-5 pt-5 border-top border-secondary border-opacity-10"
+            id="github">
+            <div>
+                <h3 class="section-title mb-0">Open Source Lab</h3>
+                <p class="small text-muted mb-0">Contributions récentes et expérimentations</p>
+            </div>
+            <a href="https://github.com/djael-ml" target="_blank" class="text-decoration-none small fw-bold">
+                Voir le profil GitHub <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="row g-4" id="repos-container">
+            <div class="col-12 text-center py-5 glass">
+                <div class="spinner-border text-primary spinner-border-sm" role="status"></div>
+                <p class="mt-2 text-muted small">Synchronisation avec GitHub...</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="mt-5 py-5 text-center" id="contact" data-aos="fade-up">
+            <h2 class="fw-bold mb-3 display-6">Opportunités de Collaboration</h2>
+            <p class="text-muted mb-5 mw-50 mx-auto text-balance">
+                Disponible pour des missions freelance ou des contrats longue durée. <br>
+                Discutons de la manière dont je peux apporter de la valeur à votre équipe.
+            </p>
+            <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+                <a href="mailto:djaelmola@gmail.com" class="btn-apple text-decoration-none">
+                    <i class="bi bi-envelope-fill me-2"></i> Me Contacter
+                </a>
+                <a href="https://fr.linkedin.com/in/dja%C3%ABl-mola" target="_blank"
+                    class="btn glass text-reset px-4 py-2 d-flex align-items-center fw-bold small">
+                    <i class="bi bi-linkedin me-2"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <p class="small text-muted mb-0 opacity-75">
+            &copy;
+            <script>document.write(new Date().getFullYear())</script> Djaël Mola.
+            <span class="d-none d-sm-inline"> | Conçu pour la performance.</span>
+        </p>
+    </footer>
+
+    <!-- Scripts - Defer for Performance -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
