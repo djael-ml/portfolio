@@ -4,9 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Djaël Mola - Développeur Fullstack spécialisé en solutions web performantes et scalables. Paris, France.">
-    <title>Djaël Mola | Portfolio Développeur Fullstack</title>
+    <title>Djaël Mola | Portfolio Développeur Web & SysAdmin</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio de Djaël Mola, Développeur Web et Administrateur Système (Windows/Linux) avec 7 ans d'expérience. Recherche d'un stage de 6 semaines.">
+    <meta name="keywords" content="Djaël Mola, Portfolio, Developpeur Web, Administrateur Système, SysAdmin, Windows, Linux, Stage, Ecole 42, HTML, CSS, JavaScript">
+    <meta name="author" content="Djaël Mola">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://djael-ml.github.io/">
+    <meta property="og:title" content="Djaël Mola | Portfolio Développeur Web & SysAdmin">
+    <meta property="og:description" content="Développeur Web et Administrateur Système (Windows/Linux) avec 7 ans d'expérience.">
+    <meta property="og:image" content="https://djael-ml.github.io/images/PortaitDjael.PNG">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Djaël Mola | Portfolio Développeur Web & SysAdmin">
+    <meta name="twitter:description" content="Développeur Web et Administrateur Système (Windows/Linux) avec 7 ans d'expérience.">
+    <meta name="twitter:image" content="https://djael-ml.github.io/images/PortaitDjael.PNG">
+
+    <!-- Favicon inline SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22%230070f3%22>DM.</text></svg>">
 
     <!-- Preload Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,9 +47,7 @@
 
 <body>
 
-    <!-- Optimized Background -->
-    <div class="bg-blur blur-1"></div>
-    <div class="bg-blur blur-2"></div>
+    <!-- Optimized Background Removed for Performance -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand glass navbar-glass">
@@ -38,9 +56,9 @@
 
             <div class="ms-auto d-flex gap-3 align-items-center">
                 <a href="#projets"
-                    class="text-decoration-none d-none d-sm-block text-reset small fw-bold text-uppercase opacity-75">Projets</a>
+                    class="nav-link-custom text-decoration-none d-none d-sm-block text-reset small fw-bold text-uppercase opacity-75">Projets</a>
                 <a href="#github"
-                    class="text-decoration-none d-none d-sm-block text-reset small fw-bold text-uppercase opacity-75">Lab</a>
+                    class="nav-link-custom text-decoration-none d-none d-sm-block text-reset small fw-bold text-uppercase opacity-75">Lab</a>
                 <a href="#contact" class="btn-apple text-decoration-none shadow-sm small">Contact</a>
                 <button id="themeToggle" class="btn-theme" aria-label="Basculer le thème">
                     <i class="bi bi-moon-stars"></i>
@@ -54,29 +72,30 @@
         <!-- Hero Profile -->
         <div class="row align-items-center mb-5" data-aos="fade-up" data-aos-duration="600">
             <div class="col-lg-3 text-center text-lg-start mb-4 mb-lg-0">
-                <img src="https://ui-avatars.com/api/?name=D+M&size=200&background=0070f3&color=fff&font-size=0.4"
-                    alt="Djaël Mola Avatar" class="hero-avatar" width="140" height="140" loading="eager">
+                <img src="images/PortaitDjael.PNG"
+                    alt="Djaël Mola" class="hero-avatar" width="160" height="160" loading="eager">
             </div>
             <div class="col-lg-9 text-center text-lg-start">
                 <div class="status-badge mb-3">
                     <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"
                         style="--bs-spinner-width: 0.6rem; --bs-spinner-height: 0.6rem;"></span>
-                    Disponible pour opportunités
+                    Objectif 42 | Recherche de Stage
                 </div>
                 <h1 class="display-4 fw-bold mb-3 lh-1">
                     Djaël Mola. <br>
-                    <span class="text-gradient">Développeur Fullstack.</span>
+                    <span class="text-gradient">Développeur Web.</span>
                 </h1>
                 <p class="lead" style="color: var(--text-muted); max-width: 600px;">
-                    Passionné par la conception d'architectures web robustes et scalables. Expert en écosystèmes PHP et
-                    JavaScript, je transforme des besoins complexes en solutions numériques performantes.
+                    Passionné par la conception d'architectures web robustes et l'<strong>administration système</strong> (gestion d'OS Windows/Linux, installation et configuration avancée de postes).<br>
+                    Actuellement en 1ère année de BTS SIO (Option SLAM), j'aspire à intégrer l'école 42.<br><br>
+                    🗓️ <strong>Recherche de stage :</strong> du 18 Mai 2026 au 29 Juin 2026 (6 semaines).
                 </p>
 
                 <div class="d-flex flex-wrap gap-4 justify-content-center justify-content-lg-start mt-4 small text-uppercase fw-bold opacity-75"
                     style="color: var(--text-muted)">
                     <span><i class="bi bi-geo-alt-fill text-primary"></i> Paris, France</span>
-                    <span><i class="bi bi-code-slash text-primary"></i> 6+ Années d'Expérience</span>
-                    <span><i class="bi bi-layers-fill text-primary"></i> Fullstack</span>
+                    <span><i class="bi bi-clock-history text-primary"></i> <span id="expYears">7</span> ans d'expérience</span>
+                    <span><i class="bi bi-search text-primary"></i> Stage du 18/05 au 29/06</span>
                 </div>
             </div>
         </div>
@@ -138,7 +157,7 @@
         <div class="row g-4 mb-5">
             <!-- Project 1 -->
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
-                <div class="card project-card glass border-0">
+                <div class="card project-card glass-card border-0">
                     <img src="https://ui-avatars.com/api/?name=Capoeira&background=f0f0f0&color=333&size=400&font-size=0.3"
                         data-src="images/capoeira-muzenza.png" class="card-img-top lazy-img" alt="Capoeira Muzenza"
                         width="600" height="200">
@@ -164,7 +183,7 @@
             </div>
             <!-- Placeholder Project 2 for Balance -->
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="card project-card glass border-0">
+                <div class="card project-card glass-card border-0">
                     <div
                         class="card-img-top d-flex align-items-center justify-content-center bg-secondary bg-opacity-10 text-muted">
                         <i class="bi bi-code-square fs-1"></i>
@@ -190,19 +209,20 @@
         </div>
 
         <!-- GitHub Section -->
-        <div class="d-flex align-items-center justify-content-between mb-4 mt-5 pt-5 border-top border-secondary border-opacity-10"
+        <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-4 mt-5 pt-5 border-top border-secondary border-opacity-10"
             id="github">
-            <div>
-                <h3 class="section-title mb-0">Open Source Lab</h3>
-                <p class="small text-muted mb-0">Contributions récentes et expérimentations</p>
+            <div class="mb-3 mb-md-0">
+                <h3 class="section-title" style="margin-bottom: 0.5rem !important;">Open Source Lab</h3>
+                <br>
+                <p class="small text-muted mb-0 mt-3">Contributions récentes et expérimentations</p>
             </div>
-            <a href="https://github.com/djael-ml" target="_blank" class="text-decoration-none small fw-bold">
+            <a href="https://github.com/djael-ml" target="_blank" class="text-decoration-none small fw-bold pb-2">
                 Voir le profil GitHub <i class="bi bi-arrow-right"></i>
             </a>
         </div>
 
         <div class="row g-4" id="repos-container">
-            <div class="col-12 text-center py-5 glass">
+            <div class="col-12 text-center py-5 glass-card">
                 <div class="spinner-border text-primary spinner-border-sm" role="status"></div>
                 <p class="mt-2 text-muted small">Synchronisation avec GitHub...</p>
             </div>
@@ -216,13 +236,16 @@
                 Discutons de la manière dont je peux apporter de la valeur à votre équipe.
             </p>
             <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
-                <a href="mailto:djaelmola@gmail.com" class="btn-apple text-decoration-none">
-                    <i class="bi bi-envelope-fill me-2"></i> Me Contacter
-                </a>
+                <button type="button" class="btn-apple border-0" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    <i class="bi bi-envelope-fill me-2"></i> Prendre Contact
+                </button>
                 <a href="https://fr.linkedin.com/in/dja%C3%ABl-mola" target="_blank"
                     class="btn glass text-reset px-4 py-2 d-flex align-items-center fw-bold small">
                     <i class="bi bi-linkedin me-2"></i> LinkedIn
                 </a>
+                <button type="button" class="btn glass text-reset px-4 py-2 d-flex align-items-center fw-bold small" data-bs-toggle="modal" data-bs-target="#cvModal">
+                    <i class="bi bi-file-earmark-pdf-fill text-danger me-2"></i> Voir mon CV
+                </button>
             </div>
         </div>
 
@@ -237,10 +260,89 @@
         </p>
     </footer>
 
+    <!-- CV Modal -->
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass" style="border-radius: 20px; overflow: hidden; background: var(--glass-bg);">
+                <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+                    <h5 class="modal-title fw-bold" id="cvModalLabel">Curriculum Vitae - Djaël Mola</h5>
+                    <div class="d-flex gap-2 align-items-center">
+                        <a href="assets/pdf/Djael_MOLA_CV.pdf" download="Djael_MOLA_CV.pdf" class="btn btn-sm btn-outline-primary rounded-pill">
+                            <i class="bi bi-download"></i> Télécharger
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                </div>
+                <div class="modal-body p-0 mt-3" style="height: 80vh;">
+                    <iframe src="assets/pdf/Djael_MOLA_CV.pdf" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass" style="border-radius: 20px; background: var(--glass-bg);">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="contactModalLabel">Prendre Contact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label small fw-bold">Votre Email</label>
+                            <input type="email" class="form-control bg-light bg-opacity-50 border-0 shadow-sm" id="contactEmail" placeholder="nom@exemple.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="contactType" class="form-label small fw-bold">Sujet de votre demande</label>
+                            <select class="form-select bg-light bg-opacity-50 border-0 shadow-sm" id="contactType" required>
+                                <option value="" disabled selected>Choisissez une option...</option>
+                                <option value="stage">Proposition de stage</option>
+                                <option value="collab">Demande de collaboration/service</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Dynamic Fields Container -->
+                        <div id="dynamicFields" class="d-none">
+                            <div class="mb-3" id="collabFields">
+                                <label for="contactMessage" class="form-label small fw-bold">Votre Message</label>
+                                <textarea class="form-control bg-light bg-opacity-50 border-0 shadow-sm" id="contactMessage" rows="5" placeholder="Décrivez votre projet ou demande..."></textarea>
+                            </div>
+                            <!-- Stage Fields -->
+                            <div class="mb-3 d-none" id="stageInfo">
+                                <div class="mb-3">
+                                    <label for="companyName" class="form-label small fw-bold">Nom de l'entreprise</label>
+                                    <input type="text" class="form-control bg-light bg-opacity-50 border-0 shadow-sm" id="companyName" placeholder="Ex: Google, StartupX...">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="jobTitle" class="form-label small fw-bold">Intitulé du poste</label>
+                                    <input type="text" class="form-control bg-light bg-opacity-50 border-0 shadow-sm" id="jobTitle" placeholder="Ex: Développeur Fullstack">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="stageMessage" class="form-label small fw-bold">Détails ou lien de l'offre</label>
+                                    <textarea class="form-control bg-light bg-opacity-50 border-0 shadow-sm" id="stageMessage" rows="3" placeholder="Lien de l'annonce ou description..."></textarea>
+                                </div>
+                                <div class="p-3 bg-primary bg-opacity-10 rounded-3 text-primary small border border-primary border-opacity-25 mt-3 text-center">
+                                    <i class="bi bi-envelope-check me-1"></i>
+                                    Cela préparera un e-mail avec vos informations préremplies via votre application de messagerie.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid mt-2">
+                            <button type="submit" class="btn btn-apple w-100 py-2">Envoyer la demande</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts - Defer for Performance -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js?v=3" defer></script>
 </body>
 
 </html>

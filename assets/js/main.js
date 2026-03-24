@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initLazyImages();
     initSmoothScroll();
+    initContactForm();
+
+    // 3. Dynamic Experience Calculation (Depuis 2019)
+    const expYearsEl = document.getElementById('expYears');
+    if (expYearsEl) {
+        expYearsEl.textContent = new Date().getFullYear() - 2019;
+    }
 
     // 3. Non-Critical: Fetch Dynamic Data
     // Use requestIdleCallback to not block main thread interactiveness
@@ -42,10 +49,23 @@ function initTheme() {
     const icon = themeToggle ? themeToggle.querySelector('i') : null;
     const html = document.documentElement;
 
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    if (savedTheme !== 'light') {
-        setTheme(savedTheme);
+    const savedTheme = localStorage.getItem('theme');
+    
+    // Appliquer le thème sauvegardé, ou détecter le thème système par défaut
+    if (savedTheme) {
+        if (savedTheme === 'dark') {
+            setTheme('dark');
+        }
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
     }
+
+    // Écouter les changements de thème système en direct
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (!localStorage.getItem('theme')) {
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+    });
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
@@ -57,6 +77,7 @@ function initTheme() {
 
     function setTheme(theme) {
         html.setAttribute('data-theme', theme);
+        html.setAttribute('data-bs-theme', theme);
         localStorage.setItem('theme', theme);
         if (icon) {
             updateIcon(theme);
@@ -142,7 +163,7 @@ function renderRepos(repos, container) {
 
     const html = repos.map((repo, index) => `
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="${index * 50}">
-            <div class="card project-card repo-card glass border-0">
+            <div class="card project-card repo-card glass-card border-0">
                 <div class="d-flex justify-content-between align-items-start mb-3">
                     <i class="bi bi-journal-code fs-5 text-primary"></i>
                     <span class="badge bg-warning text-dark rounded-pill shadow-sm" style="font-weight:600; font-size:0.75rem;">
@@ -180,5 +201,95 @@ function initSmoothScroll() {
                 });
             }
         });
+    });
+}
+
+// --- Contact Form Logic ---
+function initContactForm() {
+    const typeSelect = document.getElementById('contactType');
+    const dynamicFields = document.getElementById('dynamicFields');
+    const collabFields = document.getElementById('collabFields');
+    const stageInfo = document.getElementById('stageInfo');
+    const contactForm = document.getElementById('contactForm');
+    
+    if (!typeSelect || !contactForm) return;
+
+    // Force reset form on page load (pour que "Choisissez une option" soit sélectionné par défaut)
+    contactForm.reset();
+    dynamicFields.classList.add('d-none');
+
+    typeSelect.addEventListener('change', (e) => {
+        dynamicFields.classList.remove('d-none');
+        const val = e.target.value;
+        
+        if (val === 'collab') {
+            collabFields.classList.remove('d-none');
+            stageInfo.classList.add('d-none');
+            document.getElementById('contactMessage').setAttribute('required', 'true');
+            // Remove required from stage fields
+            document.getElementById('companyName').removeAttribute('required');
+            document.getElementById('jobTitle').removeAttribute('required');
+        } else if (val === 'stage') {
+            collabFields.classList.add('d-none');
+            stageInfo.classList.remove('d-none');
+            document.getElementById('contactMessage').removeAttribute('required');
+            // Add required to stage fields
+            document.getElementById('companyName').setAttribute('required', 'true');
+            document.getElementById('jobTitle').setAttribute('required', 'true');
+        }
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const type = typeSelect.value;
+        const email = document.getElementById('contactEmail').value;
+        
+        if (type === 'collab') {
+            const message = document.getElementById('contactMessage').value;
+            const subject = encodeURIComponent("Demande de collaboration via Portfolio");
+            const body = encodeURIComponent(`De: ${email}\n\nMessage:\n${message}`);
+            
+            // Open default mail client
+            window.location.href = `mailto:djaelmola@gmail.com?subject=${subject}&body=${body}`;
+            
+            // Close modal
+            const modalEl = document.getElementById('contactModal');
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) modal.hide();
+            
+        } else if (type === 'stage') {
+            const company = document.getElementById('companyName').value;
+            const jobTitle = document.getElementById('jobTitle').value;
+            const message = document.getElementById('stageMessage').value;
+            
+            const subject = encodeURIComponent(`Proposition de stage - ${company} - ${jobTitle}`);
+            
+            let bodyText = `🏢 NOUVELLE PROPOSITION DE STAGE\n`;
+            bodyText += `──────────────────────────────────────────\n\n`;
+            bodyText += `👤 Email du recruteur : ${email}\n`;
+            bodyText += `🏢 Entreprise : ${company}\n`;
+            bodyText += `💼 Poste proposé : ${jobTitle}\n\n`;
+            if (message) {
+                bodyText += `📝 Description ou lien de l'offre :\n`;
+                bodyText += `──────────────────────────────────────────\n`;
+                bodyText += `${message}\n\n`;
+            }
+            bodyText += `──────────────────────────────────────────\n`;
+            bodyText += `Généré depuis le portfolio de Djaël Mola.\n`;
+            
+            const body = encodeURIComponent(bodyText);
+            
+            // Open default mail client temporarily
+            window.location.href = `mailto:djaelmola@gmail.com?subject=${subject}&body=${body}`;
+            
+            // Close modal
+            const modalEl = document.getElementById('contactModal');
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) modal.hide();
+            
+            // Optionally reset form
+            contactForm.reset();
+            dynamicFields.classList.add('d-none');
+        }
     });
 }
