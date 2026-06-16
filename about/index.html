@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djaël MOLA - À propos</title>
+    <meta name="description" content="Parcours, formation et compétences de Djaël MOLA">
+    <meta property="og:title" content="Djaël MOLA - À propos">
+    <meta property="og:description" content="Parcours, formation et compétences de Djaël MOLA, Développeur Web Junior.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <link rel="stylesheet" href="/assets/fonts/outfit/index.css">
+    <link rel="stylesheet" href="/assets/icons/regular/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="/" class="logo">DM.</a>
+            <button class="burger-btn" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/about/">À propos & Compétences</a></li>
+                <li><a href="/projects/">Projets</a></li>
+            </ul>
+            <div class="nav-controls" style="display: flex; gap: 1rem;">
+                <button id="theme-toggle" class="icon-btn" aria-label="Changer le thème">
+                    <i class="ph ph-sun"></i>
+                </button>
+                <button class="icon-btn burger-btn" aria-label="Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="section-header animate-on-scroll">
+                <h2>Parcours & Formation</h2>
+            </div>
+            <div class="timeline-container">
+                <div class="glass-card timeline-card animate-on-scroll">
+                    <h3><i class="ph ph-graduation-cap"></i> Formations</h3>
+                    <ul class="timeline">
+                        <li>
+                            <span class="date">2026 - 2027</span>
+                            <h4>BTS SIO (2ème année)</h4>
+                            <p>IMCP - Institut du Marais-Charlemagne-Pollès</p>
+                        </li>
+                        <li>
+                            <span class="date">2025</span>
+                            <h4>BTS SIO (1ère année)</h4>
+                            <p>ORT Montreuil</p>
+                        </li>
+                        <li>
+                            <span class="date">2024</span>
+                            <h4>Baccalauréat Général (Maths / SI)</h4>
+                            <p>Lycée Marcel Cachin de Saint-Ouen</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-card timeline-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <h3><i class="ph ph-briefcase"></i> Expériences</h3>
+                    <ul class="timeline">
+                        <li>
+                            <span class="date">Mai 2026 - Juin 2026</span>
+                            <h4>Stagiaire - Systèmes d'Information</h4>
+                            <p>CPRN (Paris). Stage de fin de 1ère année de BTS SIO.</p>
+                        </li>
+                        <li>
+                            <span class="date">1 an</span>
+                            <h4>AideEnseignant Capoeira</h4>
+                            <p>MIG SNU - Association Muzenza. Pédagogie, gestion de groupe et transmission de discipline (4-14 ans).</p>
+                        </li>
+                        <li>
+                            <span class="date">Saisonnier</span>
+                            <h4>CatSitter</h4>
+                            <p>Indépendant. Responsabilité totale d'animaux à domicile en toute autonomie.</p>
+                        </li>
+                        <li>
+                            <span class="date">1 semaine</span>
+                            <h4>Stage Service Propreté</h4>
+                            <p>Mairie de Colombes. Sensibilisation citoyenne et service public.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="section-header animate-on-scroll">
+                <h2>Compétences techniques</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="glass-card skill-card animate-on-scroll">
+                    <i class="ph ph-code"></i>
+                    <h3>Frontend</h3>
+                    <p>React, Vue.js, TypeScript, HTML/CSS</p>
+                </div>
+                <div class="glass-card skill-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <i class="ph ph-database"></i>
+                    <h3>Backend</h3>
+                    <p>Symfony, PHP 8, Node.js, MySQL</p>
+                </div>
+                <div class="glass-card skill-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <i class="ph ph-terminal"></i>
+                    <h3>Outils & OS</h3>
+                    <p>Linux (Administration Système), Bash, GitHub</p>
+                </div>
+                <div class="glass-card skill-card animate-on-scroll" style="transition-delay: 0.3s;">
+                    <i class="ph ph-certificate"></i>
+                    <h3>Certifications</h3>
+                    <p>Pix, Linux (Unhatched Dév)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="glass-footer">
+        <div class="footer-content animate-on-scroll">
+            <h2>Contactez-moi</h2>
+            <div class="contact-links">
+                <a href="mailto:djaelmola@gmail.com" class="contact-item">
+                    <div class="icon-wrapper"><i class="ph ph-envelope-simple"></i></div>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com/djael-ml" target="_blank" class="contact-item">
+                    <div class="icon-wrapper"><i class="ph ph-github-logo"></i></div>
+                    <span>GitHub</span>
+                </a>
+                <a href="/assets/docs/CV - Djaël MOLA.pdf" target="_blank" class="contact-item">
+                    <div class="icon-wrapper"><i class="ph ph-file-pdf"></i></div>
+                    <span>CV</span>
+                </a>
+            </div>
+            <button id="open-contact-modal" class="btn secondary-btn contact-btn"><i class="ph ph-envelope-open"></i> Contacter</button>
+
+            <p class="copyright">© 2026 Djaël MOLA.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button id="close-contact-modal" class="icon-btn close-modal"><i class="ph ph-x"></i></button>
+            <h2>Envoyer un message</h2>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="ba34ec1b-ff70-4a72-8b4b-f81474bbb099">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Votre Nom / Entreprise" required>
+                    <input type="email" name="email" placeholder="Votre Email" required>
+                </div>
+                <select name="subject" required class="form-select">
+                    <option value="" disabled selected>-- Choisissez un sujet --</option>
+                    <option value="Proposition de stage / alternance">Proposition de stage / alternance</option>
+                    <option value="Proposition de poste / mission">Proposition de poste / mission</option>
+                    <option value="Échange technique / Autre">Échange technique / Autre</option>
+                </select>
+                <textarea name="message" placeholder="Votre Message (optionnel)" rows="3"></textarea>
+                <button type="submit" class="btn primary-btn"><i class="ph ph-paper-plane-tilt"></i> Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/assets/js/vanilla-tilt.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

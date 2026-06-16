@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Djaël MOLA - Accueil</title>
-    <meta name="description" content="Portfolio de Djaël MOLA, Développeur Web Junior">
-    <meta property="og:title" content="Djaël MOLA - Portfolio">
-    <meta property="og:description" content="Portfolio de Djaël MOLA, Développeur Web Junior.">
+    <title>Djaël MOLA - Projets</title>
+    <meta name="description" content="Projets open-source de Djaël MOLA">
+    <meta property="og:title" content="Djaël MOLA - Projets">
+    <meta property="og:description" content="Découvrez les projets open-source et les réalisations de Djaël MOLA.">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
     <link rel="stylesheet" href="/assets/fonts/outfit/index.css">
@@ -25,6 +25,9 @@
     <nav class="glass-nav">
         <div class="nav-content">
             <a href="/" class="logo">DM.</a>
+            <button class="burger-btn" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="/">Accueil</a></li>
                 <li><a href="/about/">À propos & Compétences</a></li>
@@ -42,17 +45,17 @@
     </nav>
 
     <main>
-        <section id="hero" class="hero-section">
-            <div class="glass-container hero-glass animate-on-scroll">
-                <div class="hero-content">
-                    <h1>Djaël <span>MOLA</span></h1>
-                    <h2>Développeur Web Junior | Objectif 42</h2>
-                    <p>Étudiant en BTS SIO (option SLAM), j'aspire à intégrer l'école 42. Passionné par la conception d'architectures web robustes et l'administration système Linux. Alliant la discipline des arts martiaux à la rigueur du code, je conçois des solutions logicielles performantes et recherche une alternance.</p>
-                    <div class="hero-actions">
-                        <a href="/projects/" class="btn primary-btn">Mes Projets</a>
-                        <a href="https://github.com/djael-ml" target="_blank" class="btn secondary-btn"><i class="ph ph-github-logo"></i> GitHub</a>
-                    </div>
-                </div>
+        <section id="projects" class="projects-section" style="min-height: 80vh;">
+            <div class="section-header animate-on-scroll">
+                <h2>Projets Réalisés</h2>
+                <p>Découvrez mes meilleures réalisations et projets open-source.</p>
+            </div>
+            <div id="github-projects" class="projects-grid">
+                <!-- Squelettes de chargement -->
+                <div class="glass-card project-card skeleton"></div>
+                <div class="glass-card project-card skeleton"></div>
+                <div class="glass-card project-card skeleton"></div>
+                <div class="glass-card project-card skeleton"></div>
             </div>
         </section>
     </main>
